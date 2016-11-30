@@ -1,0 +1,29 @@
+<ion-view view-title="MovieHouse" ng-controller="MainCtrl">
+
+
+<ion-content>
+
+<div class="list card" ng-repeat="x in myData">
+  <div class="item item-avatar">
+    <img src="https://image.tmdb.org/t/p/w500/{{x.poster_path}}">
+    <h2>{{x.title}}</h2>
+    <p>{{x.release_date}}</p>
+  </div>
+
+  <div class="item item-body">
+    <img class="full-image" src="https://image.tmdb.org/t/p/w500/{{x.poster_path}}">
+    <p>
+      {{x.overview | limitTo: 100}}.....
+    </p>
+    <p>
+      <a href="#" class="subdued">{{x.popularity}}%</a>
+	  <a href="#/app/movie"> <button class="button button-assertive read_more" ng-click="cinema(x.id)">
+		  Read More
+		 </button></a>
+    </p>
+  </div>
+</div>
+  </ion-content>
+
+
+</ion-view>

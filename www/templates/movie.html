@@ -1,0 +1,38 @@
+<ion-view>
+  <ion-content>
+      <div class="list card" ng-repeat="x in myData" id="{{x.id}}" ng-show="{{x.id}}=={{id}}">
+
+  <div class="item item-image">
+    <img src="https://image.tmdb.org/t/p/w500/{{x.poster_path}}">
+  </div>
+
+  <a class="item item-icon-left assertive" href="#">
+    Movie-Name : {{x.title}}
+  </a>
+  <div class="item item-body">
+    <p>
+     {{x.overview}}
+    </p>
+  </div>
+   <a class="item item-icon-left assertive" href="#">
+    Adult : {{x.adult}}
+  </a>
+  <a class="item item-icon-left assertive" href="#">
+    Lang : {{x.original_language}}
+  </a>
+  <a class="item item-icon-left assertive" href="#">
+    Popularity : {{x.popularity}}
+  </a>
+  <a class="item item-icon-left assertive" href="#">
+    Vote : {{x.vote_count}}
+  </a>
+  <a class="item item-icon-left assertive" href="#">
+    Date : {{x.release_date}}
+  </a>
+
+  
+
+
+</div>
+  </ion-content>
+</ion-view>
